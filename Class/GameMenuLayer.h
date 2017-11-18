@@ -1,6 +1,5 @@
 #pragma once
 #include "cocos2d.h"
-#include "StaticData.h"
 USING_NS_CC;
 
 class GameMenuLayer :

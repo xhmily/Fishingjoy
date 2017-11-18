@@ -3,6 +3,8 @@
 #include "StaticData.h"
 USING_NS_CC;
 
+#define FISH_MAX_COUNT 50
+
 class FishLayer :
 	public CCLayer
 {
@@ -11,4 +13,8 @@ public:
 	CREATE_FUNC(FishLayer)
 	virtual bool init();
 	virtual ~FishLayer(void);
+
+protected:
+	CCArray* _fishes;
+	void addFish(float delta);
 };

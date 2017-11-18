@@ -14,8 +14,9 @@ public:
 	virtual bool init();
 	virtual ~GameScene();
 protected:
-	BackgroundLayer* backgroundLayer;
-	FishLayer* fishLayer;
-	MenuLayer* menuLayer;
+	BackgroundLayer* _backgroundLayer;
+	FishLayer* _fishLayer;
+	MenuLayer* _menuLayer;
+	void preloadResources(void);
 };
 

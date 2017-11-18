@@ -10,7 +10,7 @@ bool BackgroundLayer::init()
 	{
 		return false;
 	}
-	CCSprite *bgSprite = CCSprite::create(STATIC_DATA_STRING("game_background_01"));
+	CCSprite *bgSprite = CCSprite::create("bj01_01-ipadhd.png");
 	this->addChild(bgSprite);
 	CCSize winSize = CCDirector::sharedDirector()->getWinSize();
 	bgSprite->setPosition(CCPoint(winSize.width / 2, winSize.height / 2));
