@@ -40,9 +40,9 @@
 	<string>FishActor-Small-ipadhd.plist</string>
 	<key>fish_plist_02</key>
 	<string>FishActor-Mid-ipadhd.plist</string>
-	<key>fish_frame_count</key><!--¶¯»­µÄ×î´óÖ¡Êý-->
+	<key>fish_frame_count</key><!--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½ï¿½-->
 	<string>10</string>
-	<key>fish_animation_format</key><!--¶¯»­µÄÃû³Æ-->
+	<key>fish_animation_format</key><!--ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-->
 	<string>fish_animation_%02d</string>
 	<key>fish_plist_format</key>
 	<string>fish_plist_%02d</string>
@@ -118,6 +118,23 @@
 <string>ui_text_01-ipadhd.png</string>
 <key>default_gold</key>
 <string>200</string>
+
+<key>cannon_plist</key>
+<string>cannon-ipadhd.plist</string>
+<key>bullet_plist</key>
+<string>Item-chaojiwuqi-ipadhd.plist</string>
+<key>cannon_frame_format</key>
+<string>actor_cannon1_%d1.png</string>
+<key>bullet_frame_format</key>
+<string>weapon_bullet_%02d.png</string>
+<key>net_frame_format</key>
+<string>weapon_net_%02d.png</string>
+
+
+<key>button_add</key>
+<string>ui_button_65-ipadhd.png</string>
+<key>button_sub</key>
+<string>ui_button_63-ipadhd.png</string>
 
 </dict>
 </plist>
