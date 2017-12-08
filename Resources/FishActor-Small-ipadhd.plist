@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
@@ -256,7 +256,7 @@
                 <key>sourceSize</key>
                 <string>{110,82}</string>
             </dict>
-            <key>PufferB_actor_001.png</key>
+            <key>大游/PufferB_actor_001.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{170,156}}</string>
@@ -265,7 +265,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferB_actor_002.png</key>
+            <key>大游/PufferB_actor_002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{174,94},{168,156}}</string>
@@ -274,7 +274,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferB_actor_003.png</key>
+            <key>大游/PufferB_actor_003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{686,86},{166,154}}</string>
@@ -283,7 +283,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferB_actor_004.png</key>
+            <key>大游/PufferB_actor_004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{854,158},{166,152}}</string>
@@ -292,7 +292,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferB_actor_005.png</key>
+            <key>大游/PufferB_actor_005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{856,2},{166,154}}</string>
@@ -301,7 +301,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferB_actor_006.png</key>
+            <key>大游/PufferB_actor_006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{346,2},{168,156}}</string>
@@ -310,7 +310,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferS_actor_001.png</key>
+            <key>小游/PufferS_actor_001.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{150,474},{144,62}}</string>
@@ -319,7 +319,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferS_actor_002.png</key>
+            <key>小游/PufferS_actor_002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{456,352},{146,64}}</string>
@@ -328,7 +328,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferS_actor_003.png</key>
+            <key>小游/PufferS_actor_003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{152,410},{146,62}}</string>
@@ -337,7 +337,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferS_actor_004.png</key>
+            <key>小游/PufferS_actor_004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{300,468},{144,62}}</string>
@@ -346,7 +346,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferS_actor_005.png</key>
+            <key>小游/PufferS_actor_005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{308,404},{146,62}}</string>
@@ -355,7 +355,7 @@
                 <key>sourceSize</key>
                 <string>{176,176}</string>
             </dict>
-            <key>PufferS_actor_006.png</key>
+            <key>小游/PufferS_actor_006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{308,338},{146,64}}</string>
@@ -676,13 +676,13 @@
             <key>format</key>
             <integer>1</integer>
             <key>realTextureFileName</key>
-            <string>FishActor-Small-hd.png</string>
+            <string>FishActor-Small-ipadhd.png</string>
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
             <string>$TexturePacker:SmartUpdate:b92101d80b169d11b99a256c2afa64fd$</string>
             <key>textureFileName</key>
-            <string>FishActor-Small-hd.png</string>
+            <string>FishActor-Small-ipadhd.png</string>
         </dict>
     </dict>
 </plist>

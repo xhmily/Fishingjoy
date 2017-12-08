@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
@@ -397,13 +397,13 @@
             <key>format</key>
             <integer>1</integer>
             <key>realTextureFileName</key>
-            <string>FishActor-Marlin-hd.png</string>
+            <string>FishActor-Marlin-ipadhd.png</string>
             <key>size</key>
             <string>{2048,4096}</string>
             <key>smartupdate</key>
             <string>$TexturePacker:SmartUpdate:fbd7585396ad41d4e5349e2d919c06fe$</string>
             <key>textureFileName</key>
-            <string>FishActor-Marlin-hd.png</string>
+            <string>FishActor-Marlin-ipadhd.png</string>
         </dict>
     </dict>
 </plist>
