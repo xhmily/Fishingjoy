@@ -32,7 +32,7 @@ public:
 	float getFireRange();
 	CC_PROPERTY(CannonType, _type, Type);
 	virtual ~Cannon(void);
-
+	void aimAt(CCPoint target);
 protected:
 	CCArray* _cannonSprites;
 };

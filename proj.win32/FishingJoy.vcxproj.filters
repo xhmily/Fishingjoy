@@ -51,6 +51,9 @@
     <ClCompile Include="..\Classes\Weapon.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\TouchLayer.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -96,6 +99,9 @@
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Weapon.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TouchLayer.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>

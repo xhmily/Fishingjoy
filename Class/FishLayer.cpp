@@ -1,5 +1,6 @@
 #include "FishLayer.h"
 #include "Fish.h"
+#include <ctime>
 
 FishLayer::FishLayer(void)
 {
@@ -20,6 +21,7 @@ bool FishLayer::init()
 			Fish* fish = Fish::create((FishType)type);
 			_fishes->addObject(fish);
 		}
+		srand((unsigned)time(0));
 		this->schedule(schedule_selector(FishLayer::addFish), 3.0f);
 		return true;
 	} while (0);
@@ -51,4 +53,9 @@ void FishLayer::addFish(float delta)
 
 FishLayer::~FishLayer(void)
 {
+}
+
+CCArray* FishLayer::getFishArray()
+{
+	return _fishes;
 }

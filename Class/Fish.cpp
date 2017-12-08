@@ -58,3 +58,26 @@ int Fish::getSpeed(void)
 {
 	return 200;
 }
+
+CCRect Fish::getCollisionArea()
+{
+	CCSize size = _fishSprite->getContentSize();
+	CCPoint pos = getParent()->convertToWorldSpace(getPosition());
+	return CCRect(pos.x - size.width / 2, pos.y - size.height/2, size.width, size.height);
+}
+
+void Fish::beCaught(){
+	CCCallFunc* callFunc = CCCallFunc::create(this,callfunc_selector(Fish::beCaught_CallFunc));
+	CCSequence* sequence = CCSequence::create(CCDelayTime::create(1.0f),callFunc,NULL);
+	CCBlink* blink = CCBlink::create(1.0f, 8);
+	CCSpawn* spawn = CCSpawn::create(sequence, blink, NULL);
+	_fishSprite->runAction(spawn);
+}
+
+void Fish::beCaught_CallFunc()
+{
+	if(isRunning())
+	{
+		getParent()->removeChild(this,true);
+	}
+}

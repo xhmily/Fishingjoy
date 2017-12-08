@@ -18,9 +18,13 @@ public:
 	CCSize getCannonSize();
 	void changeCannon(CannonOperate operate);
 	~Weapon(void);
-
+	void aimAt(CCPoint target);
+	void shootTo(CCPoint target);
+	CCRect getCollisionArea(Bullet* bullet);
 protected:
-	CC_SYNTHESIZE_READONLY(Cannon*, _cannon,Cannon);
-	CC_SYNTHESIZE_READONLY(CCArray*, _bullets,Bullets);
-	CC_SYNTHESIZE_READONLY(CCArray*, _fishNets,FishNets);
+	CC_SYNTHESIZE_READONLY(Cannon*, _cannon, Cannon);
+	CC_SYNTHESIZE_READONLY(CCArray*, _bullets, Bullets);
+	CC_SYNTHESIZE_READONLY(CCArray*, _fishNets, FishNets);
+	CC_SYNTHESIZE_READONLY(CCArray*, _particils, CCParticleSystemQuad);
+	Bullet* getBulletToShoot();
 };
