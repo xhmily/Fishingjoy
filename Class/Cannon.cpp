@@ -83,11 +83,22 @@ float Cannon::getFireRange()
 
 void Cannon::aimAt(CCPoint target)
 {
-	if(target.y < 0)
-	{
-		target.y = 0.0f;
-	}
 	CCPoint location = getParent()->convertToWorldSpace(getPosition());
 	float angle = ccpAngleSigned(ccpSub(target, location), CCPointMake(0, 1));
-	this->setRotation(CC_RADIANS_TO_DEGREES(angle));
+
+	float degrees = CC_RADIANS_TO_DEGREES(angle);
+	if(fabs(degrees) > 60)
+	{
+		degrees = degrees > 0 ? 60 : -60;
+	}
+	/* CC_RADIANS_TO_DEGREES(angle)
+				0
+				|
+				|
+	  -90 -------------- 90
+				|
+				|
+			   180
+	*/
+	this->setRotation(degrees);
 }

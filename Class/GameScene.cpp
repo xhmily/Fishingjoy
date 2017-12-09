@@ -27,6 +27,10 @@ bool GameScene::init()
 		_touchLayer = TouchLayer::create();
 		CC_BREAK_IF(!_touchLayer);
 		this->addChild(_touchLayer);
+		_paneLayer = PanelLayer::create();
+		CC_BREAK_IF(!_paneLayer);
+		this->addChild(_paneLayer);
+		_paneLayer->getGoldCounter()->setNumber(FishJoyData::sharedFishJoyData()->getGold());
 		this->scheduleUpdate();
 		return true;
 	} while (0);

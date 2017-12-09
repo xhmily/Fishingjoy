@@ -39,6 +39,9 @@ public:
 	virtual ~Fish(void);
 	CCRect getCollisionArea();
 	void beCaught();
+	void moveTo(CCPoint destination);
+	void moveEnd();
+	CCSize getSize();
 protected:
 	CCSprite* _fishSprite;
 	void beCaught_CallFunc();
