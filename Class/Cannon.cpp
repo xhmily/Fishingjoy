@@ -79,6 +79,7 @@ float Cannon::getFireRange()
 	double temp = pow(winSize.width/2, 2) + pow(winSize.height, 2);
 	double result = sqrt(temp);
 	return result/7*(_type+1);
+
 }
 
 void Cannon::aimAt(CCPoint target)
@@ -92,6 +93,15 @@ void Cannon::aimAt(CCPoint target)
 		degrees = degrees > 0 ? 60 : -60;
 	}
 	/* CC_RADIANS_TO_DEGREES(angle)
+				0
+				|
+				|
+	  -90 -------------- 90
+				|
+				|
+			   180
+	*/
+/* CC_RADIANS_TO_DEGREES(angle)
 				0
 				|
 				|

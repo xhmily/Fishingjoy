@@ -16,6 +16,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
 // initialize director
 // initialize director
+// initialize director
     CCDirector* pDirector = CCDirector::sharedDirector();
     CCEGLView* pEGLView = CCEGLView::sharedOpenGLView();
 
