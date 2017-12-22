@@ -1,4 +1,4 @@
-#ifndef _COUNTER_H
+﻿#ifndef _COUNTER_H
 #define _COUNTER_H
 #include "cocos2d.h"
 
@@ -18,6 +18,7 @@ protected:
     CCNode* _presenters;
 
     //改变数字时播放滚动动画
+//改变数字时播放滚动动画
     void animation();
 };
 
