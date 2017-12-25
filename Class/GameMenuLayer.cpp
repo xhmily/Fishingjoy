@@ -1,4 +1,4 @@
-#include "GameMenuLayer.h"
+﻿#include "GameMenuLayer.h"
 
 GameMenuLayer::GameMenuLayer(void)
 {
@@ -40,6 +40,7 @@ void GameMenuLayer::createMenu(void)
 	CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("UI_GameStartMenuLayer-ipadhd.plist");
 	CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("UI_GameMenuText_cn-ipadhd.plist");
 	
+	//"开始游戏"按钮正常
 	//"开始游戏"按钮正常
 	CCSprite* startNormalBgSprite = CCSprite::createWithSpriteFrameName("ui_button_box02_02.png");
 	CCSprite* startNormalTextSprite = CCSprite::createWithSpriteFrameName("ui_2p_010.png");

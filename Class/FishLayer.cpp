@@ -47,7 +47,7 @@ void FishLayer::addFish(float delta)
 				continue;
 			}
 //			this->addChild(fish);
-//			this->addChild(fish);
+
 //			fish->setPosition(ccp(CCRANDOM_0_1() * winSize.width, CCRANDOM_0_1() * winSize.height));
 			resetFish(fish);
 			count++;
