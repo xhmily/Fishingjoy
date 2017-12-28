@@ -1,0 +1,68 @@
+﻿生成启动时间为 2017/12/28 21:11:19。
+     1>项目“C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\FishingJoy.vcxproj”在节点 4 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\cocos2dx" /I"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\cocos2dx\include" /I"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\cocos2dx\kazmath\include" /I"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\cocos2dx\platform\win32" /I"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\cocos2dx\platform\third_party\win32" /I"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\cocos2dx\platform\third_party\win32\OGLES" /I"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\external" /I"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\external\chipmunk\include\chipmunk" /I"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\CocosDenshion\include" /I"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\extensions" /I..\Classes /I.. /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release.win32\\" /Fd"Release.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\AppDelegate.cpp ..\Classes\BackgroundLayer.cpp ..\Classes\Bullet.cpp ..\Classes\Cannon.cpp ..\Classes\CannonLayer.cpp ..\Classes\Counter.cpp ..\Classes\Fish.cpp ..\Classes\FishingJoyData.cpp ..\Classes\FishLayer.cpp ..\Classes\FishNet.cpp ..\Classes\GameMenuLayer.cpp ..\Classes\GameScene.cpp ..\Classes\GoldCounterLayer.cpp ..\Classes\LoadingLayer.cpp ..\Classes\MenuLayer.cpp ..\Classes\PanelLayer.cpp ..\Classes\PersonalAudioEngine.cpp ..\Classes\ProgressBar.cpp ..\Classes\ScheduleCountDown.cpp ..\Classes\TouchLayer.cpp ..\Classes\Weapon.cpp main.cpp
+         AppDelegate.cpp
+         BackgroundLayer.cpp
+         Bullet.cpp
+         Cannon.cpp
+         CannonLayer.cpp
+         Counter.cpp
+         Fish.cpp
+         FishingJoyData.cpp
+         FishLayer.cpp
+         FishNet.cpp
+         GameMenuLayer.cpp
+         GameScene.cpp
+         GoldCounterLayer.cpp
+         LoadingLayer.cpp
+         MenuLayer.cpp
+         PanelLayer.cpp
+         PersonalAudioEngine.cpp
+         ProgressBar.cpp
+         ScheduleCountDown.cpp
+         TouchLayer.cpp
+         正在编译...
+         Weapon.cpp
+         main.cpp
+       PreLinkEvent:
+         if not exist "C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\" mkdir "C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\"
+         xcopy /Y /Q "C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\..\..\..\external\libwebsockets\win32\lib\*.*" "C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\"
+         :VCEnd
+         复制了 2 个文件
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\FishingJoy.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\\" libExtensions.lib libcocos2d.lib libCocosDenshion.lib opengl32.lib glew32.lib libBox2d.lib libchipmunk.lib libcurl_imp.lib pthreadVCE2.lib websockets.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\FishingJoy.pdb" /SUBSYSTEM:WINDOWS,"5.01" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\FishingJoy.lib" /MACHINE:X86 /SAFESEH Release.win32\AppDelegate.obj
+         Release.win32\BackgroundLayer.obj
+         Release.win32\Bullet.obj
+         Release.win32\Cannon.obj
+         Release.win32\CannonLayer.obj
+         Release.win32\Counter.obj
+         Release.win32\Fish.obj
+         Release.win32\FishingJoyData.obj
+         Release.win32\FishLayer.obj
+         Release.win32\FishNet.obj
+         Release.win32\GameMenuLayer.obj
+         Release.win32\GameScene.obj
+         Release.win32\GoldCounterLayer.obj
+         Release.win32\LoadingLayer.obj
+         Release.win32\MenuLayer.obj
+         Release.win32\PanelLayer.obj
+         Release.win32\PersonalAudioEngine.obj
+         Release.win32\ProgressBar.obj
+         Release.win32\ScheduleCountDown.obj
+         Release.win32\TouchLayer.obj
+         Release.win32\Weapon.obj
+         Release.win32\main.obj
+         "C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\libcocos2d.lib"
+         "C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\libCocosDenshion.lib"
+         "C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\libExtensions.lib"
+         "C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\libBox2D.lib"
+         "C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\libchipmunk.lib"
+         正在生成代码
+         已完成代码的生成
+         FishingJoy.vcxproj -> C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\Release.win32\FishingJoy.exe
+     1>已完成生成项目“C:\cocos2d-x-2.2.5\projects\FishingJoy\proj.win32\FishingJoy.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:16.38
