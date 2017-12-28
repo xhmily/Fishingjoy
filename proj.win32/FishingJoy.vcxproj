@@ -26,6 +26,7 @@
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '11.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v110_xp</PlatformToolset>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0' and exists('$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A')">v120_xp</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -104,13 +105,14 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\cocos2dx;$(ProjectDir)..\..\..\cocos2dx\include;$(ProjectDir)..\..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\..\..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\..\..\external;$(ProjectDir)..\..\..\external\chipmunk\include\chipmunk;$(ProjectDir)..\..\..\CocosDenshion\include;$(ProjectDir)..\..\..\extensions;..\Classes;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <AdditionalDependencies>libExtensions.lib;libcocos2d.lib;libCocosDenshion.lib;opengl32.lib;glew32.lib;libBox2d.lib;libchipmunk.lib;libcurl_imp.lib;pthreadVCE2.lib;websockets.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -139,15 +141,18 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClCompile Include="..\Classes\CannonLayer.cpp" />
     <ClCompile Include="..\Classes\Counter.cpp" />
     <ClCompile Include="..\Classes\Fish.cpp" />
-    <ClCompile Include="..\Classes\FishJoyData.cpp" />
+    <ClCompile Include="..\Classes\FishingJoyData.cpp" />
     <ClCompile Include="..\Classes\FishLayer.cpp" />
     <ClCompile Include="..\Classes\FishNet.cpp" />
     <ClCompile Include="..\Classes\GameMenuLayer.cpp" />
     <ClCompile Include="..\Classes\GameScene.cpp" />
     <ClCompile Include="..\Classes\GoldCounterLayer.cpp" />
+    <ClCompile Include="..\Classes\LoadingLayer.cpp" />
     <ClCompile Include="..\Classes\MenuLayer.cpp" />
     <ClCompile Include="..\Classes\PanelLayer.cpp" />
-    <ClCompile Include="..\Classes\StaticData.cpp" />
+    <ClCompile Include="..\Classes\PersonalAudioEngine.cpp" />
+    <ClCompile Include="..\Classes\ProgressBar.cpp" />
+    <ClCompile Include="..\Classes\ScheduleCountDown.cpp" />
     <ClCompile Include="..\Classes\TouchLayer.cpp" />
     <ClCompile Include="..\Classes\Weapon.cpp" />
     <ClCompile Include="main.cpp" />
@@ -161,15 +166,20 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClInclude Include="..\Classes\CannonLayer.h" />
     <ClInclude Include="..\Classes\Counter.h" />
     <ClInclude Include="..\Classes\Fish.h" />
-    <ClInclude Include="..\Classes\FishJoyData.h" />
+    <ClInclude Include="..\Classes\FishingJoyData.h" />
     <ClInclude Include="..\Classes\FishLayer.h" />
     <ClInclude Include="..\Classes\FishNet.h" />
     <ClInclude Include="..\Classes\GameMenuLayer.h" />
     <ClInclude Include="..\Classes\GameScene.h" />
     <ClInclude Include="..\Classes\GoldCounterLayer.h" />
+    <ClInclude Include="..\Classes\LoadingLayer.h" />
     <ClInclude Include="..\Classes\MenuLayer.h" />
     <ClInclude Include="..\Classes\PanelLayer.h" />
-    <ClInclude Include="..\Classes\StaticData.h" />
+    <ClInclude Include="..\Classes\PersonalAudioEngine.h" />
+    <ClInclude Include="..\Classes\ProgressBar.h" />
+    <ClInclude Include="..\Classes\ProgressDelegate.h" />
+    <ClInclude Include="..\Classes\ScheduleCountDown.h" />
+    <ClInclude Include="..\Classes\ScheduleCounterDelegate.h" />
     <ClInclude Include="..\Classes\TouchLayer.h" />
     <ClInclude Include="..\Classes\Weapon.h" />
     <ClInclude Include="main.h" />

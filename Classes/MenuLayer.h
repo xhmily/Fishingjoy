@@ -6,9 +6,17 @@ class MenuLayer :
 	public CCLayer
 {
 public:
-	MenuLayer(void);
-	CREATE_FUNC(MenuLayer)
-	virtual bool init();
-	virtual ~MenuLayer(void);
-};
+	CREATE_FUNC(MenuLayer);
+	bool init();
 
+protected:
+	void resume(cocos2d::CCObject* pSender);
+	void mainMenu(cocos2d::CCObject* pSender);
+	void music(cocos2d::CCObject* pSender);
+	void reset(cocos2d::CCObject* pSender);
+
+	void createMenu();
+	void createBackground();
+
+	CCMenuItemToggle* _music;
+};

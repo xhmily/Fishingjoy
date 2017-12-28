@@ -40,7 +40,7 @@ bool Cannon::init(CannonType type)
 		cannonSprite->setAnchorPoint(ccp(0.5,0.18));
 	}
 	CC_SAFE_RETAIN(_cannonSprites);
-	setType(type);
+	this->setType(type);
 	return true;
 }
 
@@ -58,13 +58,14 @@ void Cannon::setType(CannonType var)
 	if(var < k_Cannon_Type_1)
 	{
 		var = (CannonType)(k_Cannon_Count-1);
-	}else if(var >= k_Cannon_Count)
+	}
+	else if(var >= k_Cannon_Count)
 	{
 		var = k_Cannon_Type_1;
 	}
-	removeChildByTag(_type);
-	CCSprite* sprite = (CCSprite*) _cannonSprites->objectAtIndex(var);
-	addChild(sprite,0,var);
+	this->removeChildByTag(_type);
+	CCSprite* sprite = (CCSprite*)_cannonSprites->objectAtIndex(var);
+	this->addChild(sprite,0,var);
 	_type = var;
 }
 
@@ -79,36 +80,15 @@ float Cannon::getFireRange()
 	double temp = pow(winSize.width/2, 2) + pow(winSize.height, 2);
 	double result = sqrt(temp);
 	return result/7*(_type+1);
-
 }
 
 void Cannon::aimAt(CCPoint target)
 {
+	if(target.y < 0)
+	{
+		target.y = 0.0f;
+	}
 	CCPoint location = getParent()->convertToWorldSpace(getPosition());
 	float angle = ccpAngleSigned(ccpSub(target, location), CCPointMake(0, 1));
-
-	float degrees = CC_RADIANS_TO_DEGREES(angle);
-	if(fabs(degrees) > 60)
-	{
-		degrees = degrees > 0 ? 60 : -60;
-	}
-	/* CC_RADIANS_TO_DEGREES(angle)
-				0
-				|
-				|
-	  -90 -------------- 90
-				|
-				|
-			   180
-	*/
-/* CC_RADIANS_TO_DEGREES(angle)
-				0
-				|
-				|
-	  -90 -------------- 90
-				|
-				|
-			   180
-	*/
-	this->setRotation(degrees);
+	this->setRotation(CC_RADIANS_TO_DEGREES(angle));
 }

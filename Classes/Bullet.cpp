@@ -21,7 +21,7 @@ bool Bullet::init()
 	}
 	CCString* fileName = CCString::createWithFormat("weapon_bullet_%03d.png", 1);
 	_bulletSprite = CCSprite::createWithSpriteFrameName(fileName->getCString());
-	_bulletSprite->setAnchorPoint(ccp(0.5, 1));
+	_bulletSprite->setAnchorPoint(ccp(0.5, 1.0));
 	this->addChild(_bulletSprite);
 	return true;
 }
@@ -58,14 +58,6 @@ float Bullet::getSpeed(int type)
 	return speed;
 }
 
-void Bullet::end()
-{
-	stopActionByTag(k_Bullet_Action);
-	this->setVisible(false);
-	FishNet* fishNet = (FishNet*)getUserObject();
-	fishNet->showAt(getPosition(), getTag());
-}
-
 void Bullet::flyTo(CCPoint targetInWorldSpace, int type/* =0 */)
 {
 	CCPoint startInNodeSpace = CCPointZero;
@@ -74,7 +66,6 @@ void Bullet::flyTo(CCPoint targetInWorldSpace, int type/* =0 */)
 
 	this->setPosition(startInNodeSpace);
 	this->setVisible(true);
-	//CCLOG("(%f - %f, %f - %f) = (%f, %f)", targetInWorldSpace.x, startInWorldSpace.x, targetInWorldSpace.y, startInWorldSpace.y, ccpSub(targetInWorldSpace, startInWorldSpace).x, ccpSub(targetInWorldSpace, startInWorldSpace).y);
 
 	float angle = ccpAngleSigned(ccpSub(targetInWorldSpace, startInWorldSpace), CCPointMake(0, 1));
 	this->setRotation(CC_RADIANS_TO_DEGREES(angle));
@@ -89,6 +80,14 @@ void Bullet::flyTo(CCPoint targetInWorldSpace, int type/* =0 */)
 	CCSequence* sequence = CCSequence::create(moveTo, callFunc, NULL);
 	sequence->setTag(k_Bullet_Action);
 	runAction(sequence);
+}
+
+void Bullet::end()
+{
+	stopActionByTag(k_Bullet_Action);
+	this->setVisible(false);
+	FishNet* fishNet = (FishNet*)getUserObject();
+	fishNet->showAt(getPosition(), getTag());
 }
 
 CCPoint Bullet::getCollosionPoint()

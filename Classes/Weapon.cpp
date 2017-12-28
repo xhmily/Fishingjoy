@@ -1,6 +1,6 @@
 #include "Weapon.h"
 
-#define BULLET_COUNT 10
+#define BULLET_COUNT 5
 
 Weapon* Weapon::create(CannonType type)
 {
@@ -22,15 +22,16 @@ bool Weapon::init(CannonType type)
 	do
 	{
 		CC_BREAK_IF(!CCNode::init());
+		
 		_cannon = Cannon::create(type);
 		CC_BREAK_IF(!_cannon);
-		addChild(_cannon, 1);
+		this->addChild(_cannon, 1);
 		
 		_bullets = CCArray::createWithCapacity(BULLET_COUNT);
 		CC_BREAK_IF(!_bullets);
 		CC_SAFE_RETAIN(_bullets);
 		
-		_fishNets=CCArray::createWithCapacity(BULLET_COUNT);
+		_fishNets = CCArray::createWithCapacity(BULLET_COUNT);
 		CC_BREAK_IF(!_fishNets);
 		CC_SAFE_RETAIN(_fishNets);
 
@@ -42,18 +43,18 @@ bool Weapon::init(CannonType type)
 		{
 			Bullet* bullet = Bullet::create();
 			_bullets->addObject(bullet);
-			addChild(bullet);
+			this->addChild(bullet);
 			bullet->setVisible(false);
 			
 			FishNet* fishNet = FishNet::create();
 			_fishNets->addObject(fishNet);
-			addChild(fishNet);
+			this->addChild(fishNet);
 			fishNet->setVisible(false);
 			bullet->setUserObject(fishNet);
 
 			CCParticleSystemQuad* particle = CCParticleSystemQuad::create("yuwanglizi.plist");
 			particle->stopSystem();
-			addChild(particle);
+			this->addChild(particle);
 			_particils->addObject(particle);
 			fishNet->setUserObject(particle);
 		}
@@ -75,7 +76,7 @@ CannonType Weapon::getCannonType()
 
 void Weapon::changeCannon(CannonOperate operate)
 {
-	int type = (int) _cannon->getType();
+	int type = (int)_cannon->getType();
 	type += operate;
 	_cannon->setType((CannonType)type);
 }
@@ -92,10 +93,10 @@ void Weapon::aimAt(CCPoint target)
 	_cannon->aimAt(target);
 }
 
-void Weapon::shootTo(CCPoint target)
+bool Weapon::shootTo(CCPoint target)
 {
 	Bullet* bullet= getBulletToShoot();
-	if(!bullet) return;
+	if(!bullet) return false;
 	CCPoint pointWorldSpace = getParent()->convertToWorldSpace(getPosition());
 	float distance = ccpDistance(target, pointWorldSpace);
 	if(distance > _cannon->getFireRange())
@@ -105,6 +106,7 @@ void Weapon::shootTo(CCPoint target)
 		target = ccpAdd(pointWorldSpace, mult);
 	}
 	bullet->flyTo(target, _cannon->getType());
+	return true;
 }
 
 Bullet* Weapon::getBulletToShoot()

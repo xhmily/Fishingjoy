@@ -15,7 +15,7 @@ public:
 	CREATE_FUNC(CannonLayer);
 	CC_SYNTHESIZE_READONLY(Weapon*, _weapon, Weapon);
 	void aimAt(CCPoint target);
-	void shootTo(CCPoint target);
+	bool shootTo(CCPoint target);
 protected:
 	CCMenuItemImage *_addMenuItem, *_subMenuItem;
 };

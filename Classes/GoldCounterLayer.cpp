@@ -1,6 +1,5 @@
 #include "GoldCounterLayer.h"
 #include "Counter.h"
-#include "StaticData.h"
 #define NUM_COUNTER 7
 
 GoldCounterLayer* GoldCounterLayer::create(int number)
@@ -31,7 +30,7 @@ bool GoldCounterLayer::init(int number)
 		float digitSize = textureSize.width/ 10;
         for(int j = 0;j < 10;j++){
             int x = digitSize * j;
-			CCSprite *sprite = CCSprite::createWithTexture(texture,CCRect(x,0,digitSize,textureSize.height));
+			CCSprite *sprite = CCSprite::createWithTexture(texture,CCRect(x, 0, digitSize, textureSize.height));
 			array->addObject(sprite);
         }
         Counter* counter = Counter::create(array);
@@ -43,6 +42,7 @@ bool GoldCounterLayer::init(int number)
 }
 void GoldCounterLayer::setNumber(int number, int ceiling /*= 999999*/)
 {
+	int _num;
     if (number > ceiling)
     {
 		number = ceiling;
@@ -53,8 +53,9 @@ void GoldCounterLayer::setNumber(int number, int ceiling /*= 999999*/)
 	}
 	for (int i = NUM_COUNTER -1; i >=0; i--)
 	{
-		Counter * counter = (Counter*)getChildByTag(i);
+		Counter* counter = (Counter*)getChildByTag(i);
 		counter->setDigit((number % 10));
+		_num = number % 10;
 		number /= 10;
 	}
 }

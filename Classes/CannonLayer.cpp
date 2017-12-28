@@ -1,4 +1,5 @@
 #include "CannonLayer.h"
+#include "PersonalAudioEngine.h"
 
 CannonLayer::CannonLayer(void)
 {
@@ -14,20 +15,20 @@ bool CannonLayer::init()
 	{
 		return false;
 	}
-	_weapon = Weapon::create((CannonType)0);
-	addChild(_weapon,1);
+	_weapon = Weapon::create(k_Cannon_Invalid);
+	this->addChild(_weapon,1);
 	CCSize winSize=CCDirector::sharedDirector()->getWinSize();
 	_weapon->setPosition(ccp(winSize.width/2 - 18, 0));
 
 	_addMenuItem = CCMenuItemImage::create(
 		"ui_button_65-ipadhd.png",
 		"ui_button_65-ipadhd.png",
-		this,menu_selector(CannonLayer::switchCannonCallback));
+		this, menu_selector(CannonLayer::switchCannonCallback));
 
 	_subMenuItem = CCMenuItemImage::create(
 		"ui_button_63-ipadhd.png",
 		"ui_button_63-ipadhd.png",
-		this,menu_selector(CannonLayer::switchCannonCallback));
+		this, menu_selector(CannonLayer::switchCannonCallback));
 
 	CCMenu* menu = CCMenu::create(_subMenuItem, _addMenuItem, NULL);
 	menu->alignItemsHorizontallyWithPadding(120);
@@ -36,7 +37,7 @@ bool CannonLayer::init()
 	return true;
 }
 
-void CannonLayer::switchCannonCallback(cocos2d::CCObject* sender)
+void CannonLayer::switchCannonCallback(CCObject* sender)
 {
 	CannonOperate operate = k_Cannon_Operate_Up;
 	if((CCMenuItemImage*)sender == _subMenuItem)
@@ -44,7 +45,7 @@ void CannonLayer::switchCannonCallback(cocos2d::CCObject* sender)
 		operate = k_Cannon_Operate_Down;
 	}
 	_weapon->changeCannon(operate);
-
+	PersonalAudioEngine::sharedEngine()->playEffect("bgm_button.aif");
 }
 
 void CannonLayer::aimAt(CCPoint target)
@@ -52,7 +53,7 @@ void CannonLayer::aimAt(CCPoint target)
 	_weapon->aimAt(target);
 }
 
-void CannonLayer::shootTo(CCPoint target)
+bool CannonLayer::shootTo(CCPoint target)
 {
-	_weapon->shootTo(target);
+	return _weapon->shootTo(target);
 }

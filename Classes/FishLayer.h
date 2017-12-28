@@ -1,6 +1,5 @@
 #pragma once
 #include "cocos2d.h"
-#include "StaticData.h"
 #include "Fish.h"
 
 USING_NS_CC;

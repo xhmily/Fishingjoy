@@ -41,8 +41,6 @@ bool Fish::init(FishType type /* = k_Fish_Type_SmallFish */)
 			type = k_Fish_Type_SmallFish;
 		}
 		setType(type);
-		//_type = type
-		//_type = type
 		CCString* animationName = CCString::createWithFormat("fish_animation_%02d", _type + 1);
 		CCAnimation* animation = CCAnimationCache::sharedAnimationCache()->animationByName(animationName->getCString());
 		CC_BREAK_IF(!animation);

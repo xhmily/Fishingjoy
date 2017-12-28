@@ -19,7 +19,7 @@ public:
 	void changeCannon(CannonOperate operate);
 	~Weapon(void);
 	void aimAt(CCPoint target);
-	void shootTo(CCPoint target);
+	bool shootTo(CCPoint target);
 	CCRect getCollisionArea(Bullet* bullet);
 protected:
 	CC_SYNTHESIZE_READONLY(Cannon*, _cannon, Cannon);
